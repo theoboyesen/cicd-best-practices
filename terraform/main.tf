@@ -93,6 +93,11 @@ resource "aws_dynamodb_table" "app_state" {
     enabled = true
   }
 
+  ttl {
+    attribute_name = "ExpiresAt"
+    enabled        = true
+  }
+
   server_side_encryption {
     enabled = true
   }
